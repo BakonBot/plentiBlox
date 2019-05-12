@@ -1,2 +1,2 @@
-# ridl
-RIDL (Roblox Improved Decal Library) allows users to create higher quality images on Roblox and place them in their games
+# RIDL (Roblox Improved Decal Library)
+**RIDL (Roblox Improved Decal Library)** is a library of tools for exporting images to Roblox with no quality loss
