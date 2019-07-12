@@ -6,7 +6,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using RobloxFiles;
+using RobloxFiles.DataTypes;
 
 namespace plentiBlox
 {
@@ -164,7 +166,7 @@ namespace plentiBlox
 
             Frame imageFrame = new Frame();
             imageFrame.Name = "Image";
-            imageFrame.Size = new RobloxFiles.DataTypes.UDim2(0, bitmap.Width, 0, bitmap.Height);
+            imageFrame.Size = new UDim2(0, bitmap.Width, 0, bitmap.Height);
             imageFrame.BorderSizePixel = 0;
             imageFrame.BackgroundTransparency = 1;
             imageFrame.Parent = screenGui;
@@ -191,10 +193,10 @@ namespace plentiBlox
                             if (colorTolerance > 0)
                             {
                                 Color avgColor = getAverageColor(pixelColor, previousPixelColor);
-                                pixelsContainer[i-1, j].BackgroundColor3 = RobloxFiles.DataTypes.Color3.FromRGB(avgColor.R, avgColor.G, avgColor.B);
+                                pixelsContainer[i-1, j].BackgroundColor3 = Color3.FromRGB(avgColor.R, avgColor.G, avgColor.B);
                                 pixelsContainer[i-1, j].BackgroundTransparency = 1f - (float)avgColor.A / 255f;
                             }
-                            pixelsContainer[i - 1, j].Size = new RobloxFiles.DataTypes.UDim2(0, pixelsContainer[i - 1, j].Size.X.Offset + 1, 0, pixelsContainer[i - 1, j].Size.Y.Offset);
+                            pixelsContainer[i - 1, j].Size = new UDim2(0, pixelsContainer[i - 1, j].Size.X.Offset + 1, 0, pixelsContainer[i - 1, j].Size.Y.Offset);
                             pixelsContainer[i, j] = pixelsContainer[i - 1, j];
                             continue;
                         }
@@ -203,9 +205,9 @@ namespace plentiBlox
                     Frame pixel = new Frame();
                     pixel.Name = "Pixel(" + i + "," + j + ")";
                     pixel.BorderSizePixel = 0;
-                    pixel.Size = new RobloxFiles.DataTypes.UDim2(0, 1, 0, 1);
-                    pixel.Position = new RobloxFiles.DataTypes.UDim2(0, i, 0, j);
-                    pixel.BackgroundColor3 = RobloxFiles.DataTypes.Color3.FromRGB(pixelColor.R, pixelColor.G, pixelColor.B);
+                    pixel.Size = new UDim2(0, 1, 0, 1);
+                    pixel.Position = new UDim2(0, i, 0, j);
+                    pixel.BackgroundColor3 = Color3.FromRGB(pixelColor.R, pixelColor.G, pixelColor.B);
                     pixel.BackgroundTransparency = 1f - (float)pixelColor.A / 255f;
                     pixel.Parent = imageFrame;
 
@@ -227,10 +229,10 @@ namespace plentiBlox
                             if (colorTolerance > 0)
                             {
                                 Color avgColor = getAverageColor(pixelColor, nextPixelColor);
-                                pixelsContainer[i, j].BackgroundColor3 = RobloxFiles.DataTypes.Color3.FromRGB(avgColor.R, avgColor.G, avgColor.B);
+                                pixelsContainer[i, j].BackgroundColor3 = Color3.FromRGB(avgColor.R, avgColor.G, avgColor.B);
                                 pixelsContainer[i, j].BackgroundTransparency = 1f - (float)avgColor.A / 255f;
                             }
-                            pixelsContainer[i, j].Size = new RobloxFiles.DataTypes.UDim2(0, pixelsContainer[i, j].Size.X.Offset, 0, pixelsContainer[i, j].Size.Y.Offset + 1);
+                            pixelsContainer[i, j].Size = new UDim2(0, pixelsContainer[i, j].Size.X.Offset, 0, pixelsContainer[i, j].Size.Y.Offset + 1);
                             pixelsContainer[i, j + 1].Parent = null;
                             pixelsContainer[i, j + 1] = pixelsContainer[i, j];
                         }
