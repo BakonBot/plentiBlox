@@ -1,6 +1,5 @@
 # What's plentiBlox?
-**plentiBlox** is a program which allows you to port over images to Roblox in the form of ***frames*** using the C# implementation of Roblox's place format by @CloneTrooper1019 which can be found [here](https://github.com/CloneTrooper1019/Roblox-File-Format)
-plentiBlox supports lossless, lossy and no compression
+**plentiBlox** is a program which allows you to port over images to Roblox in the form of ***frames*** using the C# implementation of Roblox's place format by @CloneTrooper1019 which can be found [here](https://github.com/CloneTrooper1019/Roblox-File-Format). plentiBlox supports lossless, lossy and no compression
 
 # ...But why?
 Someone had to *eventually* do it, so here we are now.
