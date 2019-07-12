@@ -4,5 +4,8 @@
 # ...But why?
 Someone had to *eventually* do it, so here we are now.
 
+# Can I download plentiBlox without building it myself?
+Yes you can [here](https://github.com/BakonBot/plentiBlox/raw/master/plentiBlox_prebuilt.zip)
+
 # *Disclaimer*: 
 The main purpose of plentiBlox is, as stated, above, **creating higher quality images** due to Roblox decals having an image size limit. The purpose of plentiBlox is **NOT** to **bypass moderation** or in any way break the **Roblox Terms of Use** or **Community Guidelines**
